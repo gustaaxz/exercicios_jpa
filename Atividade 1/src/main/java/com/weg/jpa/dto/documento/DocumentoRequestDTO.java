@@ -1,5 +1,8 @@
 package com.weg.jpa.dto.documento;
 
-public class DocumentoRequestDTO {
+public record DocumentoRequestDTO(
+    Long numero,
+    String tipo
+) {
     
 }

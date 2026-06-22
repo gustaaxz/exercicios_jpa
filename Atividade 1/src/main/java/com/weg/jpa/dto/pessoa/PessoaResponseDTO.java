@@ -1,5 +1,11 @@
 package com.weg.jpa.dto.pessoa;
 
-public class PessoaResponseDTO {
+import com.weg.jpa.model.Documento;
+
+public record PessoaResponseDTO(
+    Long id,
+    String nome,
+    Documento documento
+) {
     
 }

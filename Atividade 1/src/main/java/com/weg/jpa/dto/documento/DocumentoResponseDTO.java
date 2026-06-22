@@ -1,5 +1,10 @@
 package com.weg.jpa.dto.documento;
 
-public class DocumentoResponseDTO {
+public record DocumentoResponseDTO(
+    Long id,
+    Long numero,
+    String tipo
+
+) {
     
 }

@@ -1,5 +1,9 @@
 package com.weg.jpa.repository;
 
-public class DocumentoRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.weg.jpa.model.Documento;
+
+public interface DocumentoRepository extends JpaRepository<Documento, Long> {
     
 }
