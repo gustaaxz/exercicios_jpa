@@ -1,10 +1,10 @@
 package com.weg.jpa.dto.pessoa;
 
-import com.weg.jpa.model.Documento;
+import com.weg.jpa.dto.documento.DocumentoRequestDTO;
 
 public record PessoaRequestDTO(
     String nome,
-    Documento documento
+    DocumentoRequestDTO documento
 ) {
     
 }

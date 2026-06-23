@@ -1,6 +1,5 @@
 package com.weg.jpa.model;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,7 +26,7 @@ public class Documento {
 
     private String tipo;
 
-    @OneToOne(mappedBy = "documento", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "documento")
     private Pessoa pessoa;
 
     public Documento(Long numero, String tipo){

@@ -14,7 +14,6 @@ public class DocumentoMapper {
             requestDTO.tipo()
         );
     }
-
     public DocumentoResponseDTO toResponse(Documento documento){
         return new DocumentoResponseDTO(
             documento.getId(),

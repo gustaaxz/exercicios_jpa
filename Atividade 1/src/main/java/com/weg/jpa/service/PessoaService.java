@@ -18,9 +18,19 @@ public class PessoaService {
     private final PessoaMapper mapper;
 
     public PessoaResponseDTO postPessoa(PessoaRequestDTO requestDTO){
+        if(requestDTO.documento() != null && repository.existsByDocumentoNumero(requestDTO.documento().numero())){
+            throw new RuntimeException("Este documento já está cadastrado!");
+        }
+        
         Pessoa pessoa = mapper.toEntity(requestDTO);
         repository.save(pessoa);
         return mapper.toResponse(pessoa);
     }
 
+    public PessoaResponseDTO getPessoa(Long id){
+        Pessoa pessoa = repository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Pessoa não encontrada!"));
+    
+        return mapper.toResponse(pessoa);
+    }
 }
