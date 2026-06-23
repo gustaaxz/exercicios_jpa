@@ -6,5 +6,4 @@ import com.weg.jpa.model.Pessoa;
 
 public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
     boolean existsByDocumentoNumero(Long numero);
-
 }

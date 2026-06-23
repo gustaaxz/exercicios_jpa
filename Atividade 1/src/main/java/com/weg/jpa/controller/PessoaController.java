@@ -17,12 +17,19 @@ public class PessoaController {
 
     @PostMapping
     public PessoaResponseDTO cadastrarPessoa(@RequestBody PessoaRequestDTO requestDTO){
-        return service.postPessoa(requestDTO);
+        try {
+            return service.postPessoa(requestDTO);
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
     @GetMapping("/{id}")
     public PessoaResponseDTO buscarPessoa(@PathVariable Long id){
-        return service.getPessoa(id);
+        try {
+            return service.getPessoa(id);
+        } catch (RuntimeException e){
+            throw new RuntimeException(e.getMessage());
+        }
     }
-
 }

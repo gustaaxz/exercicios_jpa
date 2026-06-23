@@ -21,7 +21,7 @@ public class DocumentoController {
         return service.postDocumento(requestDTO);
     }
 
-    @GetMapping("/pessoa/{id}")
+    @GetMapping("/{id}")
     public PessoaResponseDTO buscarDocumento(@PathVariable Long id){
         return service.getDocumentoPorPessoa(id);
     }
