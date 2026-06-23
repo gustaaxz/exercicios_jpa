@@ -1,2 +1,2 @@
 ﻿# Exercícios usando JPA ManyToMany, OneToOne, ManyToOne, OneToMany
-(https://github.com/profviniciustrindade/many-to-many-and-one-to-one-example)[Exemplo Professor]
+[Exemplo Professor](https://github.com/profviniciustrindade/many-to-many-and-one-to-one-example)
