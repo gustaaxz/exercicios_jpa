@@ -1,7 +1,6 @@
 package com.weg.jpa.model;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,6 +35,5 @@ public class Aluno {
         joinColumns = @JoinColumn(name = "aluno_id"), // Insiro a Coluna "aluno_id" dentro de aluno_curso
         inverseJoinColumns = @JoinColumn(name = "curso_id") // Insiro a Coluna "curso_id" dentro de aluno_curso
     )
-
-    private Set<Curso> cursos = new HashSet<>(); // Evita duplicações e Exceções
+    ArrayList<Curso> cursos = new ArrayList<>();
 }

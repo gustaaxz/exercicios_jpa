@@ -1,5 +1,7 @@
 package com.weg.jpa.model;
 
+import java.util.ArrayList;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,6 +25,6 @@ public class Curso {
     private Long id;
     private String nome;
 
-    @ManyToMany(mappedBy = "cursos")
-    private String alunos; 
+    @ManyToMany(mappedBy = "cursos") 
+    ArrayList<Aluno> alunos = new ArrayList<>();
 }
